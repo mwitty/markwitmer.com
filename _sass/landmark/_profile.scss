@@ -1,0 +1,28 @@
+/* ---------------------------------------------------------------------
+Profile:
+------------------------------------------------------------------------ */
+$profile-imgWrap_WIDTH_HEIGHT: 130px;
+.profile {
+    text-align: center;
+}
+.profile__imgWrap {
+    width: $profile-imgWrap_WIDTH_HEIGHT;
+    height: $profile-imgWrap_WIDTH_HEIGHT;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 8px solid #ffffff;
+    box-shadow: 0 3px 8px 0px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+}
+
+.profile__title {
+    transform: rotate(-3deg);
+    font-family: $FF_LOGO;
+    font-size: 32px;
+    & > span {
+        display: block;
+        @include breakpoint(MD) {
+            display: inline;
+        }
+    }
+}

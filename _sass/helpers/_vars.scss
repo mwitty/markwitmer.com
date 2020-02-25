@@ -1,0 +1,21 @@
+// FONTS
+$FONT_SIZE_DEFAULT: 18px;
+$FONT_DEFAULT: 'Helvetica';
+$FF_LOGO: 'Special Elite';
+$FF_ROBOTO: 'Roboto';
+$FF_AMIRI: 'Amiri';
+
+$FF_COPY: $FF_ROBOTO;
+$FF_HDG: $FF_AMIRI;
+
+// $FONT_DEFAULT_COLOR: $COLOR_GRAY;
+$FONT_DEFAULT_COLOR: #dddddd;
+// BREAKPOINTS
+$BP_SM: 480px;
+$BP_MD: 768px;
+$BP_LG: 1024px;
+$BP_DESKTOP: 1300px; /* Helps exclude tablet */
+$SITE_MAX_WIDTH: 1180px; /* For max width for content regions */
+
+$BG_MAIN: #f1f1f1;
+$COLOR_DARK: #404040;

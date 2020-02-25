@@ -1,0 +1,21 @@
+/* ---------------------------------------------------------------------
+ Elements Styles
+------------------------------------------------------------------------ */
+html {
+    height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    font-family: $FF_COPY;
+    color: $COLOR_DARK;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 1px;
+    height: 100%;
+}
+
+img,
+picture {
+    max-width: 100%;
+}

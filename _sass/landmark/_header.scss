@@ -1,0 +1,55 @@
+/* ---------------------------------------------------------------------
+Header:
+------------------------------------------------------------------------ */
+.header {
+    border-bottom: 1px solid grey;
+}
+
+.header__constrain {
+    max-width: $SITE_MAX_WIDTH;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.header__layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @include breakpoint(MD) {
+        align-items: center;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+}
+
+.header__primary {
+    margin-bottom: 20px;
+    @include breakpoint(MD) {
+        margin-bottom: 0;
+    }
+}
+
+.header__nav {
+    $navLinkSpacing: 20px;
+    $navLinkSpacingMD: 30px;
+    font-family: $FF_HDG;
+    margin: -#{$navLinkSpacing} 0 0 -#{$navLinkSpacing};
+    display: flex;
+    // flex-direction: column;
+    & > * {
+        font-size: 24px;
+        padding: $navLinkSpacing 0 0 $navLinkSpacing;
+        text-decoration: none;
+    }
+
+    @include breakpoint(MD) {
+        margin: -#{$navLinkSpacingMD} 0 0 -#{$navLinkSpacingMD};
+        align-items: center;
+        // flex-direction: row;
+        & > * {
+            font-size: 28px;
+            padding: $navLinkSpacingMD 0 0 $navLinkSpacingMD;
+        }
+    }
+}

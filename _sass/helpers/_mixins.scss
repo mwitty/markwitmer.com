@@ -1,0 +1,42 @@
+/* ---------------------------------------------------------------------
+Mixins
+------------------------------------------------------------------------ */
+
+/* ---------------------------------------------------------------------
+BREAKPOINTS
+
+$BP_SM: 480px;
+$BP_MD: 768px;
+$BP_LG: 1024px;
+$BP_DESKTOP: 1300px;
+------------------------------------------------------------------------ */
+
+@mixin breakpoint($point) {
+    @if $point==SM {
+        @media (min-width: $BP_SM) {
+            @content;
+        } // 480px
+    } @else if $point==MD {
+        @media (min-width: $BP_MD) {
+            @content;
+        } // 768px
+    } @else if $point==LG {
+        @media (min-width: $BP_LG) {
+            @content;
+        } // 1024px
+    } @else if $point==DESKTOP {
+        @media (min-width: $BP_DESKTOP) {
+            @content;
+        } // 1300px
+    }
+}
+
+@mixin constrain($maxWidth: $SITE_MAX_WIDTH) {
+    max-width: $maxWidth;
+}
+
+@mixin constrainPage($maxWidth: $SITE_MAX_WIDTH, $sidePadding: 10px) {
+    max-width: $maxWidth;
+    padding: 0 $sidePadding;
+    margin: 0 auto;
+}

@@ -1,0 +1,17 @@
+/* ---------------------------------------------------------------------
+constrain:
+page constraint and padding
+------------------------------------------------------------------------ */
+
+.constrain {
+    max-width: $SITE_MAX_WIDTH;
+}
+
+.constrain--center {
+    margin: 0 auto;
+}
+
+.constrain--page {
+    padding: 0 10px;
+    margin: auto;
+}
