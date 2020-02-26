@@ -4,6 +4,9 @@ Profile:
 $profile-imgWrap_WIDTH_HEIGHT: 130px;
 .profile {
     text-align: center;
+    display: block;
+    text-decoration: none;
+    color: $COLOR_DARK;
 }
 .profile__imgWrap {
     width: $profile-imgWrap_WIDTH_HEIGHT;
@@ -12,17 +15,27 @@ $profile-imgWrap_WIDTH_HEIGHT: 130px;
     border-radius: 50%;
     border: 8px solid #ffffff;
     box-shadow: 0 3px 8px 0px rgba(0, 0, 0, 0.7);
-    margin-bottom: 10px;
+    margin: 0 auto 10px;
 }
 
 .profile__title {
     transform: rotate(-3deg);
     font-family: $FF_LOGO;
     font-size: 32px;
-    & > span {
+    & > * {
         display: block;
         @include breakpoint(MD) {
             display: inline;
         }
+    }
+}
+
+.profile__subtitle {
+    display: none;
+    font-size: 18px;
+    font-family: $FF_AMIRI;
+    color: $ACCENT_PRIMARY;
+    @include breakpoint(MD) {
+        display: block;
     }
 }

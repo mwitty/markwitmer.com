@@ -12,9 +12,10 @@
 // @import 'base/_fonts';
 @import 'base/_elements';
 
-/* -- STRUCTURE -- */
+/* -- SLayout -- */
 @import 'layout/_constrain';
 @import 'layout/_vr';
+@import 'layout/_cushion';
 
 /* -- LANDMARKS -- */
 @import 'landmark/_header';

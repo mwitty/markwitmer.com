@@ -2,8 +2,9 @@
 footer:
 ------------------------------------------------------------------------ */
 .footer {
-    background: grey;
+    background: $ACCENT_PRIMARY;
     padding: 10px;
+    color: #ffffff;
 }
 
 .footer__constrain {

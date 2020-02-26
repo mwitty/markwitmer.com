@@ -4,7 +4,7 @@ page constraint and padding
 ------------------------------------------------------------------------ */
 
 .constrain {
-    max-width: $SITE_MAX_WIDTH;
+    max-width: $BP_LG;
 }
 
 .constrain--center {
@@ -12,6 +12,6 @@ page constraint and padding
 }
 
 .constrain--page {
-    padding: 0 10px;
+    padding: 0 20px;
     margin: auto;
 }

@@ -1,0 +1,23 @@
+/* ---------------------------------------------------------------------
+Cushion:
+A container that adds padding
+------------------------------------------------------------------------ */
+$cushionMultiplier: 2px;
+
+@for $i from 1 to 11 {
+    .cushion__x#{$i} {
+        padding: $i * $cushionMultiplier;
+    }
+
+    .cushion__x#{$i}.cushion--top {
+        padding: ($i * $cushionMultiplier) 0 0 0;
+    }
+
+    .cushion__x#{$i}.cushion--bottom {
+        padding: 0 0 ($i * $cushionMultiplier) 0;
+    }
+
+    // .cushion__x#{$i}.cushion--sides {
+    //     padding: 0 ($i * $cushionMultiplier) 0 ($i * $cushionMultiplier);
+    // }
+}

@@ -2,13 +2,13 @@
 Header:
 ------------------------------------------------------------------------ */
 .header {
-    border-bottom: 1px solid grey;
 }
 
-.header__constrain {
-    max-width: $SITE_MAX_WIDTH;
-    padding: 20px;
-    margin: 0 auto;
+.header__innerWrap {
+    border-bottom: 1px solid grey;
+    @include constrainPage();
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .header__layout {
@@ -36,20 +36,27 @@ Header:
     font-family: $FF_HDG;
     margin: -#{$navLinkSpacing} 0 0 -#{$navLinkSpacing};
     display: flex;
-    // flex-direction: column;
-    & > * {
-        font-size: 24px;
+
+    & > .header__navItem {
         padding: $navLinkSpacing 0 0 $navLinkSpacing;
-        text-decoration: none;
+
+        & > * {
+            font-size: 24px;
+            text-decoration: none;
+            color: $ACCENT_PRIMARY;
+        }
     }
 
     @include breakpoint(MD) {
         margin: -#{$navLinkSpacingMD} 0 0 -#{$navLinkSpacingMD};
         align-items: center;
-        // flex-direction: row;
-        & > * {
-            font-size: 28px;
+
+        & > .header__navItem {
             padding: $navLinkSpacingMD 0 0 $navLinkSpacingMD;
+
+            & > * {
+                font-size: 28px;
+            }
         }
     }
 }
