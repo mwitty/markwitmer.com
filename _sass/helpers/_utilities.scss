@@ -1,0 +1,25 @@
+/* ---------------------------------------------------------------------
+Utility classes:
+Classes that can decorate other components and elements.
+------------------------------------------------------------------------ */
+@include breakpoint(MD) {
+    $img-SPACING: 20px;
+    .right,
+    .left {
+        max-width: 75%;
+    }
+
+    .right {
+        float: right;
+        padding: $img-SPACING 0 $img-SPACING $img-SPACING;
+    }
+
+    .left {
+        float: left;
+        padding: $img-SPACING $img-SPACING $img-SPACING 0;
+    }
+}
+
+.ivh {
+    @include isVisuallyHidden();
+}

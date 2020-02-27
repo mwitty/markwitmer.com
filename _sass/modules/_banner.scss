@@ -1,0 +1,41 @@
+/* ---------------------------------------------------------------------
+banner:
+A section featuring a heading and image
+------------------------------------------------------------------------ */
+.banner {
+    @include breakpoint(MD) {
+        padding: 20px;
+    }
+    text-align: center;
+    &--darktheme {
+        background-color: $ACCENT_PRIMARY;
+        color: #ffffff;
+    }
+}
+
+.banner__mainWrap {
+    @include constrain($center: true);
+}
+
+.banner__hdg {
+    padding: 20px 10px;
+    font-size: 2.25rem;
+    margin-top: 20px;
+    @include breakpoint(MD) {
+        margin: 30px 0; 
+        padding: 0 10px;
+    }
+}
+
+.banner__subhdg {
+    display: block;
+    font-size: 1.25rem;
+}
+
+.banner__img {
+
+    & > picture {
+        display: block;
+        line-height: 0;
+    }
+}

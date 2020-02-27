@@ -1,0 +1,8 @@
+- path: https://www.linkedin.com/in/mark-witmer-3147774/
+  iconClass: linkedIn
+
+- path: https://codepen.io/mwitty
+  iconClass: codepen
+
+- path: https://stackoverflow.com/users/4705584/mark-witmer
+  iconClass: stackoverflow

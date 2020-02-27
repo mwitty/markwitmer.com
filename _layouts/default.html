@@ -5,16 +5,13 @@
         <div class="site__hd">
             {% include header.html %}
         </div>
-        <div class="site__bd">
-            <div class="cushion__x10">
-                <div class="constrain constrain--page quarantineContent">
-                    {{content}}
-                </div>
-            </div>
-        </div>
+        <main class="site__bd">
+            {{content}}
+        </main>
         <div class="site__ft">
             {% include footer.html %}
         </div>
     </div>
     </body>
+    <script src="http://localhost:35729/livereload.js"></script>
 </html>

@@ -2,4 +2,23 @@
 layout: default
 ---
 
-{{ content }}
+{% if page.banner %}
+    {% assign imgDesktop = page.banner.img.desktop %}
+    {% assign imgMobile = page.banner.img.mobile %}
+    {% assign heading = page.banner.heading %}
+    {% assign subheading = page.banner.subheading %}
+    {% assign darktheme = page.banner.darktheme %}
+    {% include pageBanner.html
+        imgDesktop=imgDesktop
+        imgMobile=imgMobile
+        heading=heading
+        subheading=subheading
+        darktheme=darktheme
+    %}
+{% endif %}
+
+<div class="cushion__x10">
+    <div class="constrain constrain--page quarantineContent">
+        {{content}}
+    </div>
+</div>

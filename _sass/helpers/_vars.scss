@@ -1,9 +1,9 @@
 // FONTS
 $FONT_SIZE_DEFAULT: 18px;
-$FONT_DEFAULT: 'Helvetica';
 $FF_LOGO: 'Special Elite';
 $FF_ROBOTO: 'Roboto';
 $FF_AMIRI: 'Amiri';
+$FF_DEFAULT: $FF_ROBOTO, 'Helvetica';
 
 $FF_COPY: $FF_ROBOTO;
 $FF_HDG: $FF_AMIRI;
@@ -19,6 +19,7 @@ $SITE_MAX_WIDTH: 1180px; /* For max width for content regions */
 
 $BG_MAIN: #f1f1f1;
 $COLOR_DARK: #404040;
+$BG_DARK: #404040;
 $ACCENT_PRIMARY: #436c72;
 $ACCENT_TERTIARY: #ddb967;
 $ACCENT_QUATERNARY: #998d73;

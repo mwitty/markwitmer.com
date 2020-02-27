@@ -1,0 +1,23 @@
+/* ---------------------------------------------------------------------
+socialList:
+
+list of social media icons in footer
+------------------------------------------------------------------------ */
+
+.socialList {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    & > * {
+        line-height: 0;
+    }
+    & > * + * {
+        margin-left: 10px;
+    }
+
+    & > * > * {
+        line-height: 0;
+        display: inline-block;
+    }
+}

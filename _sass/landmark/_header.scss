@@ -2,20 +2,27 @@
 Header:
 ------------------------------------------------------------------------ */
 .header {
-}
-
-.header__innerWrap {
+    display: flex;
+    flex-direction: column;
     border-bottom: 1px solid grey;
-    @include constrainPage();
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
 
-.header__layout {
+.header__main {
+    order: 2;
+}
+
+.header__mainWrap {
+    @include constrainPage();
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.header__mainLayout {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+
     @include breakpoint(MD) {
         align-items: center;
         flex-direction: row;
@@ -23,40 +30,20 @@ Header:
     }
 }
 
-.header__primary {
+.header__mainPrimary {
     margin-bottom: 20px;
+
     @include breakpoint(MD) {
         margin-bottom: 0;
     }
 }
 
-.header__nav {
-    $navLinkSpacing: 20px;
-    $navLinkSpacingMD: 30px;
-    font-family: $FF_HDG;
-    margin: -#{$navLinkSpacing} 0 0 -#{$navLinkSpacing};
-    display: flex;
+.header__utility {
+    order: 1;
+    background: $BG_DARK;
+    padding: 5px;
+}
 
-    & > .header__navItem {
-        padding: $navLinkSpacing 0 0 $navLinkSpacing;
-
-        & > * {
-            font-size: 24px;
-            text-decoration: none;
-            color: $ACCENT_PRIMARY;
-        }
-    }
-
-    @include breakpoint(MD) {
-        margin: -#{$navLinkSpacingMD} 0 0 -#{$navLinkSpacingMD};
-        align-items: center;
-
-        & > .header__navItem {
-            padding: $navLinkSpacingMD 0 0 $navLinkSpacingMD;
-
-            & > * {
-                font-size: 28px;
-            }
-        }
-    }
+.header__utilityWrap {
+    @include constrainPage();
 }

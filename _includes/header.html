@@ -1,35 +1,55 @@
 <header class="header">
-    <!-- <div class="header__bar">
-        <nav>
-            <a href="">link1</a>
-            <a href="">link2</a>
-        </nav>
-    </div> -->
-    <div class="header__innerWrap">
-        <div class="header__layout">
-            <div class="header__primary">
-                <a href="/" class="profile">
-                    <div class="profile__imgWrap">
-                        <img src="../assets/profile.jpg" alt="Mark Witmer" />
-                    </div>
-                    <div class="profile__title">
-                        <span>Mark</span> <span>Witmer</span>
-                        <span class="profile__subtitle"
-                            >Passionate father & developer</span
-                        >
-                    </div>
-                </a>
-            </div>
-            <div class="header__secondary">
-                <nav class="header__nav">
-                    <div class="header__navItem">
-                        <a href="">Bio</a>
-                    </div>
-                    <div class="header__navItem">
-                        <a href="">Resume</a>
-                    </div>
-                </nav>
+    <div class="header__main">
+        <div class="header__mainWrap">
+            <div class="header__mainLayout">
+                <div class="header__mainPrimary">
+                    <a href="/" class="profile">
+                        <div class="profile__imgWrap">
+                            <img
+                                src="../assets/profile.jpg"
+                                alt="Mark Witmer"
+                            />
+                        </div>
+                        <div class="profile__title">
+                            <span>Mark</span> <span>Witmer</span>
+                            <span class="profile__subtitle"
+                                >Passionate father & developer</span
+                            >
+                        </div>
+                    </a>
+                </div>
+                <div class="header__mainSecondary">
+                    <nav class="mainNav">
+                        {% for link in site.data.mainNav %}
+                            {% assign current = nil %}
+                            {% if page.url == link.path %}
+                                {% assign current = 'mainNav__itemLink--current' %}
+                            {% endif%}
+                        <div class="mainNav__item">
+                            <a href="{{link.path}}" class="mainNav__itemLink {{current}}"
+                        >{{link.title}}</a
+                            >
+                        </div>
+                        {% endfor %}
+                    </nav>
+                </div>
             </div>
         </div>
     </div>
+    <aside class="header__utility">
+        <div class="header__utilityWrap">
+            <nav class="socialList">
+                {% for link in site.data.socialNav %}
+                <div class="socialList__item">
+                    <a
+                        href="{{link.path}}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="icon icon__{{link.iconClass}}"></i
+                    ></a>
+                </div>
+                {% endfor %}
+            </nav>
+        </div>
+    </aside>
 </header>

@@ -24,8 +24,8 @@
     color: inherit; /* 1 */
     font-family: $FF_COPY; /* 1 */
     font-weight: normal;
-    // font-size: 1rem;
-    // line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.6;
     word-break: break-word;
     word-break: break-word;
     -ms-word-wrap: break-word; /* 2 */
@@ -46,7 +46,7 @@
  1. !important to override inheritance from ancestors
  2. If a piece of media does not have a container, add margin below it to keep the flow intact
 ========================================================================== */
-.quarantineContent img,
+.quarantineContent img:not(.right, .left),
 .quarantineContent iframe,
 .quarantineContent embed,
 .quarantineContent object,
@@ -99,23 +99,23 @@
 }
 
 .quarantineContent h1 {
-    // font-size: 2.25rem;
-    font-size: 34px;
+    font-size: 2.25rem;
+    // font-size: 34px;
 }
 
 .quarantineContent h2 {
-    // font-size: 1.5rem;
-    font-size: 24px;
+    font-size: 1.5rem;
+    // font-size: 24px;
 }
 
 .quarantineContent h3 {
-    // font-size: 1.3125rem;
-    font-size: 20px;
+    font-size: 1.3125rem;
+    // font-size: 20px;
 }
 
 .quarantineContent h4 {
-    // font-size: 1.125rem;
-    font-size: 16px;
+    font-size: 1.125rem;
+    // font-size: 16px;
 }
 
 .quarantineContent h5 {

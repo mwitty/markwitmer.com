@@ -7,6 +7,16 @@ footer:
     color: #ffffff;
 }
 
-.footer__constrain {
+.footer__innerWrap {
     @include constrainPage();
+}
+
+.footer__layout {
+    display: flex;
+    & > * {
+        width: 50%;
+    }
+}
+
+.footer__secondary {
 }

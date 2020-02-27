@@ -1,0 +1,85 @@
+/* ---------------------------------------------------------------------
+mainNav:
+For global navigation
+------------------------------------------------------------------------ */
+.mainNav {
+    $mainNavLinkSpacing: 15px;
+    $mainNavLinkSpacingMD: 25px;
+    font-family: $FF_HDG;
+    margin: -#{$mainNavLinkSpacing} 0 0 -#{$mainNavLinkSpacing};
+    display: flex;
+
+    & > .mainNav__item {
+        padding: $mainNavLinkSpacing 0 0 $mainNavLinkSpacing;
+
+        & > * {
+            font-size: 24px;
+            text-decoration: none;
+            color: $ACCENT_PRIMARY;
+        }
+    }
+
+    @include breakpoint(MD) {
+        margin: -#{$mainNavLinkSpacingMD} 0 0 -#{$mainNavLinkSpacingMD};
+        align-items: center;
+
+        & > .mainNav__item {
+            padding: $mainNavLinkSpacingMD 0 0 $mainNavLinkSpacingMD;
+
+            & > * {
+                // links
+                font-size: 28px;
+            }
+        }
+    }
+
+    // link hover animation
+    .mainNav__itemLink {
+        position: relative;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            width: 50%;
+            height: 2px;
+            background-image: linear-gradient(
+                to left,
+                $ACCENT_PRIMARY 0%,
+                $ACCENT_PRIMARY 100%
+            );
+            background-size: 0% 2px;
+            background-repeat: no-repeat;
+            transition: 0.2s background-size ease-in-out;
+        }
+
+        &:before {
+            left: auto;
+            right: 1px;
+        }
+
+        &:after {
+            left: 1px;
+            right: auto;
+            transform: rotate(-180deg);
+        }
+
+        &:hover:before,
+        &:hover:after {
+            background-size: 100% 2px;
+        }
+
+        &--current:before,
+        &--current:after {
+            // background-color: $ACCENT_PRIMARY;
+            // color: #ffffff;
+            // border-radius: 5px;
+            // box-shadow: 0 2px 2px 0 rgba(0,0,0,.8);
+            background-size: 100% 2px;
+        
+        }
+    }
+}

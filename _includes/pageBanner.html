@@ -1,0 +1,19 @@
+<section class="banner{% if darktheme %} banner--darktheme{% endif %}">
+    <div class="banner__mainWrap">
+        {{% if include.heading %}}
+        <div class="banner__hdg">
+        <h1 class="hdg">{{include.heading}} <span class="banner__subhdg"><span class="ivh">:</span>{{include.subheading}}</span></h1>
+        </div>
+        {% if include.imgMobile %}
+        <div class="banner__img">
+            <picture>
+                <source 
+                srcset="{{include.imgDesktop}}"
+                media="(min-width: 768px)"
+                >
+                <img src="{{include.imgMobile}}" alt="" />
+            </picture>
+        </div>
+        {% endif %}
+    </div>
+</section>
