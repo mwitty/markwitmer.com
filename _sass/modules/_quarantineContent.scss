@@ -21,6 +21,10 @@
  3. Remove excess margin from the first and last child and use !important to override inheritance from ancestors
 ========================================================================== */
 .quarantineContent {
+    margin-top: 15px;
+    @include breakpoint(MD) {
+        margin-top: 35px;
+    }
     color: inherit; /* 1 */
     font-family: $FF_COPY; /* 1 */
     font-weight: normal;
@@ -30,6 +34,7 @@
     word-break: break-word;
     -ms-word-wrap: break-word; /* 2 */
     word-wrap: break-word; /* 2 */
+    word-spacing: 1px;
 }
 
 .quarantineContent > *:first-child {
@@ -98,27 +103,32 @@
     color: $COLOR_DARK;
 }
 
-.quarantineContent h1 {
+.quarantineContent h1,
+.quarantineContent .hdg_1 {
     font-size: 2.25rem;
     // font-size: 34px;
 }
 
-.quarantineContent h2 {
+.quarantineContent h2,
+.quarantineContent .hdg_2 {
     font-size: 1.5rem;
     // font-size: 24px;
 }
 
-.quarantineContent h3 {
+.quarantineContent h3,
+.quarantineContent .hdg_3 {
     font-size: 1.3125rem;
     // font-size: 20px;
 }
 
-.quarantineContent h4 {
+.quarantineContent h4,
+.quarantineContent .hdg_4 {
     font-size: 1.125rem;
     // font-size: 16px;
 }
 
-.quarantineContent h5 {
+.quarantineContent h5,
+.quarantineContent .hdg_5 {
     font-size: 14px;
 }
 

@@ -1,5 +1,8 @@
-- title: Resume
-  path: resume
+- title: Work History
+  path: /work-history/
+
+- title: Contact
+  path: /contact/
   
 - title: About
   path: /about/

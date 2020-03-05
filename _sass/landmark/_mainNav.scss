@@ -8,6 +8,7 @@ For global navigation
     font-family: $FF_HDG;
     margin: -#{$mainNavLinkSpacing} 0 0 -#{$mainNavLinkSpacing};
     display: flex;
+    flex-wrap: wrap;
 
     & > .mainNav__item {
         padding: $mainNavLinkSpacing 0 0 $mainNavLinkSpacing;

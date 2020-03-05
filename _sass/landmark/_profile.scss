@@ -9,6 +9,7 @@ $profile-imgWrap_WIDTH_HEIGHT: 110px;
     color: $COLOR_DARK;
 }
 .profile__imgWrap {
+    display: none;
     width: $profile-imgWrap_WIDTH_HEIGHT;
     height: $profile-imgWrap_WIDTH_HEIGHT;
     overflow: hidden;

@@ -18,11 +18,11 @@ A section featuring a heading and image
 }
 
 .banner__hdg {
-    padding: 20px 10px;
+    padding: 20px 10px 15px;
     font-size: 2.25rem;
     margin-top: 20px;
     @include breakpoint(MD) {
-        margin: 30px 0; 
+        margin: 30px 0 25px; 
         padding: 0 10px;
     }
 }

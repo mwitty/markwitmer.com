@@ -5,3 +5,4 @@ sass:
 kramdown:
     standalone_image: true
 permalink: pretty
+exclude: ['scripts']

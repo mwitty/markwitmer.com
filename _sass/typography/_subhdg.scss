@@ -1,0 +1,17 @@
+/* ---------------------------------------------------------------------
+Subhheading:
+appears inline within an outer hdg class
+------------------------------------------------------------------------ */
+
+.subhdg {
+    font-size: .7em;
+}
+
+.subhdg--italic {
+    font-style: italic;
+}
+
+.subhdg--subtitle {
+    display: block;
+    padding-top: 10px;
+}
